@@ -177,3 +177,146 @@ Trailing Stop:
     id: 'bos',
     title: 'BOS (Break of Structure)',
     shortDescription: 'Mavjud trend davomining kuchli tasdiqi',
+
+    professionalDefinition: `BOS (Break of Structure) - bu mavjud trendning davom etayotganini 
+    tasdiqlovchi struktura sinishi. Bu trend kuchayganini va yangi impulsiv harakatning 
+    boshlanganini bildiradi.`,
+    simpleDefinition: `BOS - bu trend davom etayotganini bildiruvchi signal. 
+    Masalan, narx yuqoriga ketayotgan bo'lsa va yana yangi yuqori nuqtani sindirib o'tsa, 
+    bu trend kuchayganini bildiradi. Bu poyezd stansiyadan yo'lga chiqishga o'xshaydi - 
+    harakat davom etmoqda va kuchaymoqda.`,
+    innerLogic: `BOS shakllanishi:
+
+1. Mavjud trend aniq (uptrend yoki downtrend)
+2. Narx oxirgi swing high/low-ni buzadi
+3. Bu struktura sinishi - BOS
+4. Trend kuchayadi va davom etadi
+
+BOS vaqtida:
+- Smart Money o'z pozitsiyalariga qo'shmoqda
+- Institutional orders kirayapti
+- Retail ham trendni ko'rib kirayapti
+- Momentum kuchli`,
+    smartMoneyLogic: `Smart Money BOS-dan qanday foydalanadi:
+
+1. ACCUMULATION davom etmoqda
+   - Pozitsiyalarga qo'shish
+   - Trend continuation setup
+
+2. BOS CONFIRMATION
+   - Trend strength tasdiqlandi
+   - Entry signal
+
+3. PULLBACK ENTRY
+   - BOS-dan keyin retracement
+   - OB yoki FVG-ga qaytish
+   - Optimal entry
+
+4. CONTINUATION
+   - Kuchli trend davomi
+   - Keyingi targets ga harakat`,
+    retailMistakes: [
+      'BOS-ni trend tugashi deb o\'ylash',
+      'Pullback-ni kutmasdan darhol kirish',
+      'Structure break-ni confirmation-siz trade qilish',
+      'Higher timeframe bias-ni e\'tiborsiz qoldirish',
+      'False break-larni haqiqiy BOS deb o\'ylash',
+      'Overtrading - har bir kichik break-da kirish',
+      'Risk management-ni unutish'
+    ],
+    entryStrategy: `BOS Entry Strategiyasi:
+
+1. BOS-ni aniqlang
+   - Clear structure break
+   - HTF bias bilan mos kelishi
+   - Volume confirmation
+
+2. Pullback kuting
+   - BOS-dan keyin narx qaytadi
+   - OB yoki FVG-ga retest
+   - Bu eng yaxshi entry
+
+3. LTF Confirmation:
+   - 15M yoki 5M-da kirish
+   - Mini BOS yoki CHoCH
+   - Entry trigger
+
+4. Entry Zone:
+   - Order Block ichida
+   - FVG zonasida
+   - Fibonacci 0.5-0.618 level`,
+    stopLoss: `Stop Loss Joylashtirish:
+
+1. Conservative:
+   - Structure invalidation ortida
+   - Major swing nuqta ortida
+   - 20-30 pips
+
+2. Aggressive:
+   - Order Block narigi tomonida
+   - FVG tashqarisida
+   - 10-15 pips
+
+3. BOS-based:
+   - BOS nuqtasidan pastda/tepada
+   - Structure-ga asoslangan
+   - Logical placement`,
+    takeProfit: `Take Profit Targets:
+
+1. TP1 (40%):
+   - Keyingi minor structure
+   - 1:2 RR
+   - Quick profit
+
+2. TP2 (40%):
+   - Major liquidity pool
+   - 1:4 RR
+   - Main target
+
+3. TP3 (20%):
+   - Daily/Weekly high/low
+   - 1:6+ RR
+   - Runner
+
+Trailing:
+- TP1 dan keyin BE-ga
+- Har BOS-da SL-ni ko'tarish`,
+    riskManagement: `Risk Management:
+
+1. Position Size:
+   - Account-ning 1-2%
+   - Multiple entry bo'lsa umumiy 2%
+   - Lot calculation
+
+2. Risk:Reward:
+   - Minimal 1:2
+   - Ideal 1:3 yoki 1:4
+   - BOS-da yuqori RR mumkin
+
+3. Trade Management:
+   - Partial close strategy
+   - Trailing stop
+   - Break-even rule
+
+4. Limits:
+   - Kunlik 3 ta trade
+   - Haftasiga 2% maksimal risk
+   - Drawdown limit 10%`,
+    keyPoints: [
+      'BOS - trend continuation signali',
+      'HTF bias bilan mos kelishi kerak',
+      'Pullback-dan entry optimal',
+      'Structure-based SL eng yaxshi',
+      'Multiple TP strategy ishlatish',
+      'False BOS-dan ehtiyot bo\'lish',
+      'Volume confirmation muhim',
+      'Risk management - birinchi o\'rinda'
+    ],
+    examples: [
+      'EUR/USD H4: Bullish BOS - swing high sinildi, pullback 61.8% Fib-ga, buy entry',
+      'GOLD 1H: Bearish BOS - swing low sinildi, retest OB-ga, sell setup',
+      'GBP/JPY 15M: Multiple BOS - har birida qo\'shish, trailing stop',
+      'BTC/USD Daily: Strong BOS + volume - major trend change'
+    ]
+  }
+}
